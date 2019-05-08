@@ -1,33 +1,14 @@
 # Sass Boilerplate
 
-This is a sample project using the [7-1 architecture pattern](http://sass-guidelin.es/#architecture) and sticking to [Sass Guidelines](http://sass-guidelin.es) writing conventions.
+This is a sample project using the [sass-guidelin](https://sass-guidelin.es/)
 
 Each folder of this project has its own `README.md` file to explain the purpose and add extra information. Be sure to browse the repository to see how it works.
 
-## Using the indented syntax
+### How to start
 
-### Sass conversion
+- [Downaload](https://www.ruby-lang.org/en/downloads/) `ruby` if not yet downaloaded
+- Instasll  `gem install sass` if not yet installed
+- In the command prompt, inside the folder where your .scss file exists, type the following then hit enter  `sass --watch styles.scss:styles.css`
 
-This boilerplate does not provide a `.sass` version as it would be painful to maintain both versions without an appropriate build process. However, it is very easy to convert this boilerplate to Sass indented syntax.
+### [Tutorial](https://www.impressivewebs.com/sass-on-windows/)
 
-Clone it, head into the project and then run:
-
-```
-sass-convert -F scss -T sass -i -R ./  && find . -iname “*.scss” -exec bash -c 'mv "$0" “${0%\.scss}.sass"' {} \;
-```
-
-### Use with Node-sass
-
-When using `node-sass` - in order to build that boilerplate, one needs to:
-
-- install `node-sass` if not yet installed:
-
-```bash
-npm install -g node-sass
-```
-
-- run build command from command line:
-
-```bash
-node-sass stylesheets/main.scss dist/main.css
-```
