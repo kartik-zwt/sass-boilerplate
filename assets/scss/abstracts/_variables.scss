@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+/// Regular ( Open Sans ) font family
+$font-family-base: 'Open Sans', 'Arial', sans-serif !default;
+
+/// Code (Courier) font family
+$font-family-code: 'Courier New','Arial', sans-serif !default;
+
+/// Copy text size
+$font-size-base: 16px !default;
+$font-size-small: $font-size-base - 2 !default;
+$font-size-large: $font-size-base + 2 !default;
+
+/// Main brand color
+$brand-color: #0eb769 !default;
+$brand-bright-color: #319e6b !default;
+$primary-color: #319e6b !default;
+
+$bg-gray:#f3f3f3 !default;
+$white-base:#ffffff !default;
+$black-base:#000000 !default;
+$body-bg: $white-base;
+
+// text color
+$text-color: #000000 !default ;
+
+// Heading font family
+$font-size-h1: 52px !default;
+$font-size-h2: 42px !default;
+$font-size-h3: 36px !default;
+$font-size-h4: 24px !default;
+$font-size-h5: 20px !default;
+$font-size-h6: 18px !default;
+
+$headings-margin-bottom: 15px !default;
+$headings-font-family:   inherit !default;
+$headings-font-weight:   700 !default;
+$headings-line-height:   1.1 !default;
+$headings-color:         $text-color !default;
+
+// Forms
+$label-color: $text-color;
+$label-font-weight: 400;
+$label-font-family: $font-family-base;
+$label-font-size: $font-size-small; //14px
+
+$input-bg:  $white-base;
+$input-font-family: $font-family-base;
+$input-font-size: $font-size-base;
+$input-font-weight: 400;
+$input-color: $primary-color;
+$input-color-placeholder: $brand-bright-color;
+$input-height-base: 50px;
+$input-height-large:  65px;
+$input-height-small:  50px;
+$input-radius:  0;
+$input-border-color:  $brand-bright-color;
+$input-border-color-focus:  $brand-bright-color;
+$textarea-height-base:  150px;
+
+/// Container's maximum width
+$container-width: 1200px !default;
+
+// media breakpoint
+$xs : 575px; // Extra small devices (portrait phones, less than 576px)
+$sm : 767px; // Small devices (landscape phones, 576px and up)
+$md : $sm + 1; // Medium devices (tablets, 768px and up)
+$lg : 992px; // Large devices (desktops, 992px and up)
+$xl : 1200px; // Extra large devices (large desktops, 1200px and up)
+

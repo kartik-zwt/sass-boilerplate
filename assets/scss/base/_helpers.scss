@@ -1,0 +1,259 @@
+// -----------------------------------------------------------------------------
+// This file contains CSS helper classes.
+// -----------------------------------------------------------------------------
+
+/**
+ * Main content containers
+ */
+.container {
+  max-width: $container-width;
+  margin-left: auto;
+  margin-right: auto; 
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%; 
+ }
+.container-fluid {
+    width: 100%;
+    margin: auto;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+/* row and column */
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -20px;
+  margin-left: -20px;
+  &.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+    > [class*="cell-"] {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+}
+[class*="cell-"] {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  width: 100%;
+}
+
+/* align item */
+.d-flex {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+}
+
+.align-items-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.align-content-center {
+  -ms-flex-line-pack: center;
+  align-content: center;
+}
+
+.align-items-end {
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.justify-content-end {
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+}
+
+.d-flex img {
+  align-self: center;
+}
+
+/* column structure */
+$grid-columns: 12;
+
+/* ----- Extra small devices 575px ----- */
+@for $i from 1 through $grid-columns {
+  .cell-#{$i} {
+    width: percentage($i / $grid-columns);
+  }
+}
+
+/* show and hide cell */
+.cell-none {
+  display: none;
+}
+
+.cell-block {
+  display: block;
+}
+
+/* ----- Small devices (landscape phones, 576px and up) ----- */
+@include grid-breakpoint(sm) {
+  @for $i from 1 through $grid-columns {
+    .cell-sm-#{$i} {
+      width: percentage($i / $grid-columns);
+    }
+  }
+
+  /* show and hide cell md */
+  .cell-sm-none {
+    display: none;
+  }
+
+  .cell-sm-block {
+    display: block;
+  }
+}
+
+/* ----- Medium devices (tablets, 768px and up) ----- */
+@include grid-breakpoint(md) {
+  @for $i from 1 through $grid-columns {
+    .cell-md-#{$i} {
+      width: percentage($i / $grid-columns);
+    }
+  }
+
+  /* show and hide cell lg */
+  .cell-md-none {
+    display: none;
+  }
+
+  .cell-md-block {
+    display: block;
+  }
+}
+
+/* ----- Large devices (desktops, 992px and up) ----- */
+@include grid-breakpoint(lg) {
+  @for $i from 1 through $grid-columns {
+    .cell-lg-#{$i} {
+      width: percentage($i / $grid-columns);
+    }
+  }
+
+  /* show and hide cell xl */
+  .cell-lg-none {
+    display: none;
+  }
+
+  .cell-lg-block {
+    display: block;
+  }
+}
+
+/* ----- Extra large devices (large desktops, 1200px and up) ----- */
+@include grid-breakpoint(xl) {
+  @for $i from 1 through $grid-columns {
+    .cell-xl-#{$i} {
+      width: percentage($i / $grid-columns);
+    }
+  }
+
+  /* show and hide cell xl */
+  .cell-xl-none {
+    display: none;
+  }
+
+  .cell-xl-block {
+    display: block;
+  }
+}
+
+/* text alignment */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/*--- cell space ---*/
+$spaceamounts: (0,20,30,40,50); // Adjust this to include the pixel amounts you need.
+$sidesy: (top, bottom); // Leave this variable alone
+$sidesx: (left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sidesy {
+    @if str-slice($side, 0, 1) == t && str-slice($side, 0, 1) == b{
+      .cell-m#{str-slice($side, 0, 1)}-#{$space},.cell-my-#{$space}  {
+        margin-#{$side}: #{$space}px;
+      }  
+      .cell-p#{str-slice($side, 0, 1)}-#{$space},.cell-py-#{$space}  {
+        margin-#{$side}: #{$space}px;
+      } 
+    } 
+  }
+  @each $side in $sidesx {
+    @if str-slice($side, 0, 1) == l && str-slice($side, 0, 1) == r{
+      .cell-m#{str-slice($side, 0, 1)}-#{$space},.cell-mx-#{$space}  {
+        margin-#{$side}: #{$space}px;
+      }  
+      .cell-p#{str-slice($side, 0, 1)}-#{$space},.cell-px-#{$space}  {
+        margin-#{$side}: #{$space}px;
+      }  
+    } 
+  }
+}
+
+/* wordpress align class */
+.alignnone {
+  float: none;
+  margin: 20px 0;
+}
+
+.aligncenter {
+  display: block;
+  clear: both;
+  margin: 20px auto;
+}
+
+.alignleft {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 20px 20px;
+}

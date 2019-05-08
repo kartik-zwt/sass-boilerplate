@@ -1,0 +1,62 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+/* buttons */
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  padding: 10px 15px;
+  font-size: $font-size-base;
+  line-height: 1.5;
+  text-align: center;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 0px;
+  color: $white-base;
+  background-color: $brand-color;
+  &:hover,
+  &:focus {
+    background-color: $brand-bright-color;
+    color: $white-base;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 15px;
+    font-size:$font-size-base;
+    line-height: 1.5;
+    text-align: center;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 0px;
+    color: $white-base;
+    background-color: $brand-color;
+    &:hover,
+    &:focus {
+        color: $white-base;
+        background-color: $brand-bright-color;
+        text-decoration: none
+    }
+}
+
+.btn-link {
+    color: $brand-color;
+    font-size: $font-size-base;
+    border-bottom: 1px solid $brand-color;
+    margin-bottom: 2px;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+        color: $brand-bright-color;
+        text-decoration: none;
+    }
+}
+

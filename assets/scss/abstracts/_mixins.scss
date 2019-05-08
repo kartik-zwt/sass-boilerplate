@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+// Responsive media breakpoint
+@mixin breakpoint($size) {
+  @if $size == xs { // Extra small devices (portrait phones, less than 576px)
+    @media (max-width:$xs) { @content; }
+  } @else if $size == sm { // Small devices (landscape phones, 576px and up)
+    @media (max-width: $sm) { @content; }
+  } @else if $size == smlandscape { // iPhone X landscape
+    @media (min-width : 375px) and (max-width : 812px) and (orientation : landscape) { @content; }
+  } @else if $size == md { // Medium devices (tablets, 768px and up)
+    @media (min-width: $md) and (max-width: $lg - 1) { @content; }
+  } @else if $size == lg { // Large devices (desktops, 992px and up)
+    @media (min-width: $lg) and (max-width: $container-width - 1) { @content; }
+  } @else if $size == xl { // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: $xl ) { @content; }
+  }
+}
+
+// Responsive media grid breakpoint
+@mixin grid-breakpoint($size) { 
+  @if $size == sm { // Small devices (landscape phones, 576px and up)
+    @media (min-width: $xs+1) { @content; }
+  } @else if $size == md { // Medium devices (tablets, 768px and up)
+    @media (min-width: $md){ @content; }
+  } @else if $size == lg { // Large devices (desktops, 992px and up)
+    @media (min-width: $lg ) { @content; }
+  } @else if $size == xl {  // Extra large devices (large desktops, 1200px and up)
+    @media (min-width: $xl ) { @content; }
+  }
+}
+
+
