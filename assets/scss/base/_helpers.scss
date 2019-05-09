@@ -5,7 +5,7 @@
 /**
  * Main content containers
  */
-.container {
+ .container {
   max-width: $container-width;
   margin-left: auto;
   margin-right: auto; 
@@ -36,11 +36,11 @@
       padding-left: 0;
     }
   }
-  [class*="cell-"] {
-    padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
-  }
+}
+[class*="cell-"] {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
 }
 
 /* align item */
@@ -214,22 +214,22 @@ $sidesx: (left, right); // Leave this variable alone
 
 @each $space in $spaceamounts {
   @each $side in $sidesy {
-    @if str-slice($side, 0, 1) == t and str-slice($side, 0, 1) == b{
+    @if str-slice($side, 0, 1) == t && str-slice($side, 0, 1) == b{
       .m#{str-slice($side, 0, 1)}-#{$space},.my-#{$space}  {
         margin-#{$side}: #{$space}px;
       }  
       .p#{str-slice($side, 0, 1)}-#{$space},.py-#{$space}  {
-        margin-#{$side}: #{$space}px;
+        padding-#{$side}: #{$space}px;
       } 
     } 
   }
   @each $side in $sidesx {
-    @if str-slice($side, 0, 1) == l and str-slice($side, 0, 1) == r{
+    @if str-slice($side, 0, 1) == l && str-slice($side, 0, 1) == r{
       .m#{str-slice($side, 0, 1)}-#{$space},.mx-#{$space}  {
         margin-#{$side}: #{$space}px;
       }  
       .p#{str-slice($side, 0, 1)}-#{$space},.px-#{$space}  {
-        margin-#{$side}: #{$space}px;
+        padding-#{$side}: #{$space}px;
       }  
     } 
   }
