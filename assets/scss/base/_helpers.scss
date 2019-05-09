@@ -36,12 +36,11 @@
       padding-left: 0;
     }
   }
-}
-[class*="cell-"] {
-  padding-left: 15px;
-  padding-right: 15px;
-  position: relative;
-  width: 100%;
+  [class*="cell-"] {
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+  }
 }
 
 /* align item */
@@ -215,21 +214,21 @@ $sidesx: (left, right); // Leave this variable alone
 
 @each $space in $spaceamounts {
   @each $side in $sidesy {
-    @if str-slice($side, 0, 1) == t && str-slice($side, 0, 1) == b{
-      .cell-m#{str-slice($side, 0, 1)}-#{$space},.cell-my-#{$space}  {
+    @if str-slice($side, 0, 1) == t and str-slice($side, 0, 1) == b{
+      .m#{str-slice($side, 0, 1)}-#{$space},.my-#{$space}  {
         margin-#{$side}: #{$space}px;
       }  
-      .cell-p#{str-slice($side, 0, 1)}-#{$space},.cell-py-#{$space}  {
+      .p#{str-slice($side, 0, 1)}-#{$space},.py-#{$space}  {
         margin-#{$side}: #{$space}px;
       } 
     } 
   }
   @each $side in $sidesx {
-    @if str-slice($side, 0, 1) == l && str-slice($side, 0, 1) == r{
-      .cell-m#{str-slice($side, 0, 1)}-#{$space},.cell-mx-#{$space}  {
+    @if str-slice($side, 0, 1) == l and str-slice($side, 0, 1) == r{
+      .m#{str-slice($side, 0, 1)}-#{$space},.mx-#{$space}  {
         margin-#{$side}: #{$space}px;
       }  
-      .cell-p#{str-slice($side, 0, 1)}-#{$space},.cell-px-#{$space}  {
+      .p#{str-slice($side, 0, 1)}-#{$space},.px-#{$space}  {
         margin-#{$side}: #{$space}px;
       }  
     } 
