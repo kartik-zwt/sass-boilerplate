@@ -5,7 +5,7 @@
 /**
  * Main content containers
  */
- .container {
+.container {
   max-width: $container-width;
   margin-left: auto;
   margin-right: auto; 
@@ -22,10 +22,8 @@
 
 /* row and column */
 .row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  @include flexbox();
+  @include flex-wrap(wrap);
   margin-right: -20px;
   margin-left: -20px;
   &.no-gutters {
@@ -45,58 +43,43 @@
 
 /* align item */
 .d-flex {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  @include flexbox()
 }
 
 .flex-nowrap {
-  -ms-flex-wrap: nowrap;
-  flex-wrap: nowrap;
+  @include flex-wrap(nowrap)
 }
 
 .align-items-center {
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  @include align-items(center)
 }
 
 .align-content-center {
-  -ms-flex-line-pack: center;
-  align-content: center;
+  @include align-content(center)
 }
 
 .align-items-end {
-  -ms-flex-align: end;
-  align-items: flex-end;
+  @include align-items(flex-end)
 }
 
 .justify-content-center {
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  @include justify-content(center)
 }
 
 .justify-content-end {
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+  @include justify-content(flex-end)
 }
 
 .justify-content-between {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  @include justify-content(space-between)
 }
 
 .justify-content-around {
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
+  @include justify-content(space-around)
 }
 
 .d-flex img {
-  align-self: center;
+  @include align-self(center);
 }
 
 /* column structure */
