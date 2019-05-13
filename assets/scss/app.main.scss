@@ -10,29 +10,24 @@
   'abstracts/mixins';
 
 // 2. Vendors
-@import
-  'vendors/normalize';
+// @import
+//   'vendors/slick';
 
 // 3. Base stuff
 @import
   'base/fonts',
+  'base/normalize',
   'base/helpers',
   'base/typography';
-
-// 4. Layout-related sections
-@import
-  'layout/header',
-  'layout/footer';
 
 // 5. Components
 @import
   'components/button',
-  'components/forms';
-
-// 6. Themes
-@import
-  'themes/default'; //global style code goes here
+  'components/forms',
+  'components/header',
+  'components/footer';
 
 // 7. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/default'; //global style code goes here

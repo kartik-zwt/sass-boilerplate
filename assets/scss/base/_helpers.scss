@@ -22,8 +22,10 @@
 
 /* row and column */
 .row {
-  @include flexbox();
-  @include flex-wrap(wrap);
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   margin-right: -20px;
   margin-left: -20px;
   &.no-gutters {
@@ -43,49 +45,64 @@
 
 /* align item */
 .d-flex {
-  @include flexbox()
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .flex-nowrap {
-  @include flex-wrap(nowrap)
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .align-items-center {
-  @include align-items(center)
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .align-content-center {
-  @include align-content(center)
+  -ms-flex-line-pack: center;
+  align-content: center;
 }
 
 .align-items-end {
-  @include align-items(flex-end)
+  -ms-flex-align: end;
+  align-items: flex-end;
 }
 
 .justify-content-center {
-  @include justify-content(center)
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .justify-content-end {
-  @include justify-content(flex-end)
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .justify-content-between {
-  @include justify-content(space-between)
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .justify-content-around {
-  @include justify-content(space-around)
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
 }
 
 .d-flex img {
-  @include align-self(center);
+  align-self: center;
 }
 
 /* column structure */
 $grid-columns: 12;
 
-/* ----- Extra small devices 575px ----- */
+/* ----- Extra small devices 0px and up ----- */
 @for $i from 1 through $grid-columns {
   .cell-#{$i} {
     width: percentage($i / $grid-columns);
@@ -101,8 +118,8 @@ $grid-columns: 12;
   display: block;
 }
 
-/* ----- Small devices (landscape phones, 576px and up) ----- */
-@include grid-breakpoint(sm) {
+/* ----- Small devices (landscape phones, 641px and up) ----- */
+@include grid-breakpoint(xs) {
   @for $i from 1 through $grid-columns {
     .cell-sm-#{$i} {
       width: percentage($i / $grid-columns);
@@ -137,7 +154,7 @@ $grid-columns: 12;
   }
 }
 
-/* ----- Large devices (desktops, 992px and up) ----- */
+/* ----- Large devices (desktops, 1024px and up) ----- */
 @include grid-breakpoint(lg) {
   @for $i from 1 through $grid-columns {
     .cell-lg-#{$i} {
