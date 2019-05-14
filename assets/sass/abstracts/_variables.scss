@@ -8,23 +8,28 @@ $font-family-base: 'Open Sans', 'Arial', sans-serif !default;
 /// Code (Courier) font family
 $font-family-code: 'Courier New','Arial', sans-serif !default;
 
-/// Copy text size
+/// body contect text size
 $font-size-base: 16px !default;
 $font-size-small: $font-size-base - 2 !default;
 $font-size-large: $font-size-base + 2 !default;
 
-/// Main brand color
-$brand-color: #0eb769 !default;
-$brand-bright-color: #319e6b !default;
-$primary-color: #319e6b !default;
+// Colors
+$brand-primary : #0eb769 !default;
+$brand-secondary :#319e6b !default; 
 
-$bg-gray:#f3f3f3 !default;
-$white-base:#ffffff !default;
-$black-base:#000000 !default;
-$body-bg: $white-base;
+// Start with assigning color names to specific hex values.
+$white:  #fff !default;
+$black:  #000 !default;
+$gray:   #464a4c !default;
+
+// Body
+//
+// Settings for the `<body>` element.
+$body-bg:       $white !default;
+$body-color:    $black !default;
 
 // text color
-$text-color: #000000 !default ;
+$text-color:   $black !default ;
 
 // Heading font family
 $font-size-h1: 52px !default;
@@ -46,18 +51,18 @@ $label-font-weight: 400;
 $label-font-family: $font-family-base;
 $label-font-size: $font-size-small; //14px
 
-$input-bg:  $white-base;
+$input-bg:  $white;
 $input-font-family: $font-family-base;
 $input-font-size: $font-size-base;
 $input-font-weight: 400;
-$input-color: $primary-color;
-$input-color-placeholder: $brand-bright-color;
+$input-color: $brand-primary;
+$input-color-placeholder: $brand-secondary;
 $input-height-base: 50px;
 $input-height-large:  65px;
 $input-height-small:  50px;
 $input-radius:  0;
-$input-border-color:  $brand-bright-color;
-$input-border-color-focus:  $brand-bright-color;
+$input-border-color:  $brand-secondary;
+$input-border-color-focus:  $brand-secondary;
 $textarea-height-base:  150px;
 
 /// Container's maximum width

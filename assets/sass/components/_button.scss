@@ -16,12 +16,12 @@ input[type="submit"] {
   border: none;
   text-transform: uppercase;
   border-radius: 0px;
-  color: $white-base;
-  background-color: $brand-color;
+  color: $white;
+  background-color: $brand-primary;
   &:hover,
   &:focus {
-    background-color: $brand-bright-color;
-    color: $white-base;
+    background-color: $brand-secondary;
+    color: $white;
     outline: none;
     cursor: pointer;
   }
@@ -37,25 +37,25 @@ input[type="submit"] {
     border: none;
     text-transform: uppercase;
     border-radius: 0px;
-    color: $white-base;
-    background-color: $brand-color;
+    color: $white;
+    background-color: $brand-primary;
     &:hover,
     &:focus {
-        color: $white-base;
-        background-color: $brand-bright-color;
+        color: $white;
+        background-color: $brand-secondary;
         text-decoration: none
     }
 }
 
 .btn-link {
-    color: $brand-color;
+    color: $brand-primary;
     font-size: $font-size-base;
-    border-bottom: 1px solid $brand-color;
+    border-bottom: 1px solid $brand-primary;
     margin-bottom: 2px;
     text-decoration: none;
     &:hover,
     &:focus {
-        color: $brand-bright-color;
+        color: $brand-secondary;
         text-decoration: none;
     }
 }
