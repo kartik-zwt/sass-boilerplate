@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+/* theme fonts goes here */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
+
+// Configuration and helpers
+@import
+ 'abstracts/variables',
+'abstracts/mixins';
+
+// Base stuff
+@import 
+'base/fonts',
+'base/normalize',
+'base/helpers',
+'base/typography';
+
+// Vendors
+@import 
+'vendors/slick';
+
+// Components
+@import 
+'components/button',
+'components/forms',
+'components/header',
+'components/footer';
+
+// Page-specific styles
+@import 
+'pages/home',
+'pages/default'; //global style code goes here
