@@ -13,6 +13,8 @@
     'base/fonts',
     'base/normalize',
     'base/helpers',
+    'base/button',
+    'base/forms',
     'base/typography';
 
 // Vendors
@@ -21,8 +23,6 @@
 
 // Components
 @import 
-    'components/button',
-    'components/forms',
     'components/header',
     'components/device-menu',
     'components/footer';
