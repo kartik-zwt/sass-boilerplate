@@ -4,31 +4,30 @@
 
 // Responsive media breakpoint
 @mixin breakpoint($size) {
-  @if $size == xs { // Extra small devices (portrait phones, less than 640px)
-    @media ( max-width: $xs ) { @content; }
-  } @else if $size == sm { // Small devices (landscape phones, less than 767px)
-    @media ( max-width: $sm ) { @content; }
-  } @else if $size == smlandscape { // iPhone X landscape
-    @media ( min-height: 375px ) and ( max-width: 812px ) and ( orientation: landscape ) { @content; }
-  } @else if $size == md { // Medium devices (tablets, 768px and up)
-    @media ( min-width: $md ) and ( max-width: $lg - 1 ) { @content; }
-  } @else if $size == lg { // Large devices (desktops, 1024px and up)
-    @media ( min-width: $lg ) and ( max-width: $xl) { @content; }
-  } @else if $size == xl { // Extra large devices (large desktops, 1200px and up)
-    @media ( min-width: $xl+1 ) { @content; }
-  }
+	@if $size == xs { // Extra small devices (portrait phones, less than 640px)
+		@media ( max-width: $xs ) { @content; }
+	} @else if $size == sm { // Small devices (landscape phones, less than 767px)
+		@media ( max-width: $sm ) { @content; }
+	} @else if $size == smlandscape { // iPhone X landscape
+		@media ( min-height: 375px ) and ( max-width: 812px ) and ( orientation: landscape ) { @content; }
+	} @else if $size == md { // Medium devices (tablets, 768px and up)
+		@media ( min-width: $md ) and ( max-width: $lg - 1 ) { @content; }
+	} @else if $size == lg { // Large devices (desktops, 1024px and up)
+		@media ( min-width: $lg ) and ( max-width: $xl) { @content; }
+	} @else if $size == xl { // Extra large devices (large desktops, 1200px and up)
+		@media ( min-width: $xl+1 ) { @content; }
+	}
 }
 
 // Responsive media grid breakpoint
-@mixin grid-breakpoint($size) { 
-  @if $size == xs { // Small devices (landscape phones, less than 640px)
-    @media ( min-width: $xs+1 ) { @content; }
-  } @else if $size == md { // Medium devices (tablets, less than 767px)
-    @media ( min-width: $md ){ @content; }
-  } @else if $size == lg { // Large devices (desktops, 1024px and up)
-    @media ( min-width: $lg ) { @content; }
-  } @else if $size == xl {  // Extra large devices (large desktops, 1200px and up)
-    @media ( min-width: $xl ) { @content; }
-  }
+@mixin grid-breakpoint($size) {
+	@if $size == xs { // Small devices (landscape phones, less than 640px)
+		@media ( min-width: $xs+1 ) { @content; }
+	} @else if $size == md { // Medium devices (tablets, less than 767px)
+		@media ( min-width: $md ){ @content; }
+	} @else if $size == lg { // Large devices (desktops, 1024px and up)
+		@media ( min-width: $lg ) { @content; }
+	} @else if $size == xl {	// Extra large devices (large desktops, 1200px and up)
+		@media ( min-width: $xl ) { @content; }
+	}
 }
-

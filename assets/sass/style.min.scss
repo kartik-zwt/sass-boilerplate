@@ -5,29 +5,29 @@
 
 // Configuration and helpers
 @import
-    'abstracts/variables',
-    'abstracts/mixins';
+	'abstracts/variables',
+	'abstracts/mixins';
 
 // Base stuff
-@import 
-    'base/fonts',
-    'base/normalize',
-    'base/helpers',
-    'base/typography',
-    'base/button',
-    'base/forms';
+@import
+	'base/fonts',
+	'base/normalize',
+	'base/helpers',
+	'base/typography',
+	'base/button',
+	'base/forms';
 
 // Vendors
-@import 
-    'vendors/slick';
+@import
+	'vendors/slick';
 
 // Components
-@import 
-    'components/header',
-    'components/device-menu',
-    'components/footer';
+@import
+	'components/header',
+	'components/device-menu',
+	'components/footer';
 
 // Page-specific styles
-@import 
-    'pages/home',
-    'pages/default'; //global style code goes here
+@import
+	'pages/home',
+	'pages/default'; //global style code goes here

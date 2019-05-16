@@ -2,10 +2,10 @@
  * Basic typography style for copy text
  */
 body {
-  color: $text-color;
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: 1.7;
+	color: $text-color;
+	font-family: $font-family-base;
+	font-size: $font-size-base;
+	line-height: 1.7;
 }
 
 // Heading style
@@ -21,160 +21,159 @@ h6,
 .h4,
 .h5,
 .h6 {
-  margin-bottom: $headings-margin-bottom;
-  font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
-  line-height: $headings-line-height;
-  color: $headings-color;
-
-  a {
-    color: inherit;
-    text-decoration: none;
-  }
+	margin-bottom: $headings-margin-bottom;
+	font-family: $headings-font-family;
+	font-weight: $headings-font-weight;
+	line-height: $headings-line-height;
+	color: $headings-color;
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
 }
 
 h1,
 .h1 {
-  font-size: $font-size-h1;
+	font-size: $font-size-h1;
 
-  @include breakpoint(sm) {
-    font-size: $font-size-h1 / 1.5;
-  }
+	@include breakpoint(sm) {
+		font-size: $font-size-h1 / 1.5;
+	}
 }
 
 h2,
 .h2 {
-  font-size: $font-size-h2;
+	font-size: $font-size-h2;
 
-  @include breakpoint(sm) {
-    font-size: $font-size-h2 / 1.5;
-  }
+	@include breakpoint(sm) {
+		font-size: $font-size-h2 / 1.5;
+	}
 }
 
 h3,
 .h3 {
-  font-size: $font-size-h3;
+	font-size: $font-size-h3;
 
-  @include breakpoint(sm) {
-    font-size: $font-size-h3 / 1.5;
-  }
+	@include breakpoint(sm) {
+		font-size: $font-size-h3 / 1.5;
+	}
 }
 
 h4,
 .h4 {
-  font-size: $font-size-h4;
+	font-size: $font-size-h4;
 
-  @include breakpoint(sm) {
-    font-size: $font-size-h4 / 1.2;
-  }
+	@include breakpoint(sm) {
+		font-size: $font-size-h4 / 1.2;
+	}
 }
 
 h5,
 .h5 {
-  font-size: $font-size-h5;
+	font-size: $font-size-h5;
 
-  @include breakpoint(sm) {
-    font-size: $font-size-h5 / 1.1;
-  }
+	@include breakpoint(sm) {
+		font-size: $font-size-h5 / 1.1;
+	}
 }
 
 h6,
 .h6 {
-  font-size: $font-size-h6;
+	font-size: $font-size-h6;
 
-  @include breakpoint(sm) {
-    font-size: $font-size-h6 - 2;
-  }
+	@include breakpoint(sm) {
+		font-size: $font-size-h6 - 2;
+	}
 }
 
 p {
-  margin-bottom: 15px;
+	margin-bottom: 15px;
 
-  &:last-child {
-    margin-bottom: 0;
-  }
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 
 ul {
-  padding-left: 20px;
+	padding-left: 20px;
 
-  li {
-    padding-top: 6px;
-    padding-bottom: 6px;
+	li {
+		padding-top: 6px;
+		padding-bottom: 6px;
 
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
 }
 
 ol {
-  padding-left: 20px;
+	padding-left: 20px;
 
-  li {
-    padding-top: 6px;
-    padding-bottom: 6px;
+	li {
+		padding-top: 6px;
+		padding-bottom: 6px;
 
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
+		&:last-child {
+			padding-bottom: 0;
+		}
+	}
 }
 
 blockquote {
-  display: block;
-  text-align: left;
-  position: relative;
-  margin-top: 30px;
-  background-color: $gray;
-  padding: 20px 20px;
-  border-left: 4px solid $brand-primary;
-  line-height: 2;
-  font-size: $font-size-large;
-  font-style: italic;
-  margin-bottom: 25px;
-  color: $white;
+	display: block;
+	text-align: left;
+	position: relative;
+	margin-top: 30px;
+	background-color: $gray;
+	padding: 20px 20px;
+	border-left: 4px solid $brand-primary;
+	line-height: 2;
+	font-size: $font-size-large;
+	font-style: italic;
+	margin-bottom: 25px;
+	color: $white;
 
-  p {
-    font-size: inherit;
-    font-weight: inherit;
-    line-height: inherit;
-    color: inherit;
-  }
+	p {
+		font-size: inherit;
+		font-weight: inherit;
+		line-height: inherit;
+		color: inherit;
+	}
 }
 
 hr {
-  border: 0 $black solid;
-  border-top-width: 1px;
-  height: 0;
-  margin: 10px auto 40px;
+	border: 0 $black solid;
+	border-top-width: 1px;
+	height: 0;
+	margin: 10px auto 40px;
 }
 
 img {
-  border: none;
-  max-width: 100%;
-  height: auto;
-  display: inline-block;
-  vertical-align: top;
+	border: none;
+	max-width: 100%;
+	height: auto;
+	display: inline-block;
+	vertical-align: top;
 }
 
 img[src$=".svg"] {
-  width: 100%;
-  height: auto;
-  display: inline-block;
-  vertical-align: top;
+	width: 100%;
+	height: auto;
+	display: inline-block;
+	vertical-align: top;
 }
 
 /* Link
 ------------------------------------------------------------------------------*/
 a {
-  color: $brand-primary;
-  transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
+	color: $brand-primary;
+	transition: background-color 0.3s ease 0s, color 0.3s ease 0s;
 
-  &:hover,
-  &:focus {
-    color: $black;
-    text-decoration: underline;
-    outline: none;
-  }
+	&:hover,
+	&:focus {
+		color: $black;
+		text-decoration: underline;
+		outline: none;
+	}
 }
