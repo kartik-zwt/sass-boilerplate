@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 /* responsive nav for small devices */
-.mobilenav{
+.mobilenav {
     .hamburger {
         display: flex;
         align-items: center;
@@ -14,13 +14,13 @@
         width: 50px;
         background-color: transparent;
         text-align: center;
-        &:not(.close){
+        &:not(.close) {
             position: absolute;
             top: 20px;
             right: 20px;
             z-index: 99;
         }
-        &.close{
+        &.close {
             padding: 10px;
              .wrap {
                 position: relative;
@@ -36,15 +36,15 @@
                 transform: rotate(45deg);
                 background-color: #fff;
                 &:last-child{
-                   transform: rotate(-45deg); 
+                   transform: rotate(-45deg);
                 }
             }
         }
         &:hover,
-        &:focus{
+        &:focus {
             background-color: transparent;
             outline: none;
-            cursor: pointer; 
+            cursor: pointer;
         }
         .line {
             display: block;
@@ -71,15 +71,15 @@
         .menu-state { left: 0; }
     }
     .nav-logo { padding: 15px; }
-    ul{
+    ul {
         position: relative;
         padding: 0;
         margin: 0;
         list-style: none;
-        ul{
+        ul {
             display: none;
         }
-        li{
+        li {
             position: relative;
             padding: 0;
             margin: 0;
@@ -94,7 +94,7 @@
                 cursor: pointer;
                 &:not(.trigger-caret) { pointer-events: none; }
                 &:after,
-                &:before{
+                &:before {
                     position: absolute;
                     content: '';
                     top: 0;
@@ -107,14 +107,14 @@
                     height: 2px;
                     background: #fff;
                 }
-                &:after{
+                &:after {
                     transform: rotate(-90deg);
                     transition: all .2s ease;
                 }
             }
             &.is-open {
-               > .caret:after { transform: rotate(0); }            
-            } 
+               > .caret:after { transform: rotate(0); }
+            }
             a {
                 z-index: 2;
                 display: block;
@@ -124,10 +124,10 @@
                 font-size: 20px;
                 text-decoration: none;
                 color: #ffffff;
-            }   
+            }
             &.has-sub {
                 > a { padding-right: 40px; }
-            }  
+            }
             li a {
                 padding-left: 30px;
                 font-size: 16px;
@@ -135,7 +135,7 @@
                     padding-left: 50px;
                     font-size: 15px;
                 }
-            }         
+            }
         }
     }
     .nav-backdrop {
